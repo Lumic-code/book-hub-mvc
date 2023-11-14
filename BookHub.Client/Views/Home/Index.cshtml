@@ -1,0 +1,28 @@
+﻿@model List<BookItemViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>List of Books</h1>
+
+@foreach (var bookitem in Model)
+{
+    <div>
+        <a asp-action="#" asp-controller="#">
+            <div class="card-head">@bookitem.Name</div>
+
+            <div class="card-body">
+                <div class="book-portrait"></div>
+            </div>
+
+            <div class="card-foot">
+                <div>Author: @bookitem.Author</div>
+                <div>ISBN: @bookitem.ISBN</div>
+                <div>Pages: @bookitem.TotalPages</div>
+            </div>
+        </a>
+
+    </div>
+}
+
+
